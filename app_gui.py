@@ -6,6 +6,9 @@ import numpy as np
 from denoiser import pretrained
 from pydub import AudioSegment
 from scipy.io import wavfile
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 import os
 
 def load_audio_flexible(path):
